@@ -1,0 +1,39 @@
+\mode<presentation>
+
+\RequirePackage{xcolor}
+\RequirePackage{tikz}
+
+\useinnertheme{lea}
+\useoutertheme{lea}
+\usecolortheme{lea}
+
+% Remove Navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+%Fonts
+\setbeamerfont{title}{size=\Huge}
+\newcommand{\titlefontsize}[2]{\setbeamerfont{title}{size=\fontsize{#1}{#2}\selectfont}}
+\setbeamerfont{author}{size=\Large}
+\newcommand{\authorfontsize}[2]{\setbeamerfont{author}{size=\fontsize{#1}{#2}\selectfont}}
+\setbeamerfont{description}{size=\Large}
+\newcommand{\descriptionfontsize}[2]{\setbeamerfont{description}{size=\fontsize{#1}{#2}\selectfont}}
+\setbeamerfont{date}{size=\Large}
+\newcommand{\datefontsize}[2]{\setbeamerfont{date}{size=\fontsize{#1}{#2}\selectfont}}
+\setbeamerfont{section in toc}{size=\fontsize{25pt}{25pt}\selectfont}
+\setbeamerfont{navigation}{size=\fontsize{8pt}{8pt}\selectfont, family=\sffamily}
+\setbeamerfont{frametitle}{size=\Large, series=\bfseries}
+\newcommand{\frametitlefontsize}[2]{\setbeamerfont{frametitle}{size=\fontsize{#1}{#2}\selectfont}}
+\setbeamerfont{footline}{size=\fontsize{13pt}{13pt}\selectfont}
+
+% Beamer template
+\setbeamertemplate{section in toc}{%
+  {\color{black}\inserttocsectionnumber.}~\color{black}\inserttocsection}
+\setbeamertemplate{subsection in toc}[subsections numbered]
+
+\setbeamertemplate{caption}[numbered]
+\usepackage[font=scriptsize,labelfont=bf]{caption}
+
+\setbeamertemplate{bibliography item}[text]
+\setbeamertemplate{footline}[frame number]
+
+\mode<all>

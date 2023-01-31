@@ -1,0 +1,112 @@
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{
+    paperwidth = 25.4cm,
+    paperheight = 14.288cm
+}
+
+
+\usepackage{fontspec}
+\usepackage{anyfontsize}
+\usepackage[absolute,overlay]{textpos}
+
+\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{pagecolor}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows,shapes,decorations.pathmorphing}
+
+\usepackage{physics}
+\usepackage{qcircuit}
+\usepackage{amsmath, amssymb}
+
+\usepackage{hyperref}
+\usepackage{scrextend}
+
+% Frame with huge centered text
+\newcommand{\framecard}[2][BACKGROUND_DEFAULT]{
+    {\setbeamercolor{background canvas}{bg=#1}%
+      \begin{frame}[plain,c]%
+        \begin{center}%
+          \vspace{1cm}
+          {\color{white}\Huge\textbf{%
+            {#2}%
+          }}%
+        \end{center}%
+      \end{frame}%
+  }
+}
+
+% Frame with bakcground image
+\newcommand{\framepic}[3][1]{
+  {
+    \usebackgroundtemplate{%
+    \tikz[overlay,remember picture] \node[opacity=#1, at=(current page.center)] {
+      \includegraphics[height=\paperheight]{#2}};
+    }
+    \begin{frame}[plain]
+      \huge{#3}
+    \end{frame}
+  }
+}
+
+
+\newcommand{\theLogosFooter}{3cm}
+\newcommand{\theLogosFH}{11.288cm}
+
+\newcommand{\addlogosFooter}[1]{
+    \begin{textblock*}{\paperwidth}(0cm,\theLogosFH)
+        {
+            \begin{tikzpicture}
+                \useasboundingbox (0,0) rectangle(\the\paperwidth, \theLogosFooter);
+                \fill[color=LOGOS_FOOT_LINE] (0, \theLogosFooter) rectangle(\the\paperwidth, \theLogosFooter + 0.05cm);
+                \fill[color=LOGOS_FOOTER] (0,0) rectangle(\the\paperwidth, \theLogosFooter);
+            \end{tikzpicture}
+        }
+    \end{textblock*}
+
+    \begin{textblock*}{\paperwidth}(0.2cm,\theLogosFH)
+        {
+        \begin{center}
+            \vfil
+            #1
+        \end{center}
+        }
+    \end{textblock*}
+}
+
+
+\newcommand{\framelogos}[3][BACKGROUND_DEFAULT]{
+    {
+    \setbeamercolor{background canvas}{bg=#1}%
+    \begin{frame}[plain,c]%
+        \begin{center}%
+            \vspace{1cm}
+            {\color{white}\Huge\textbf{%
+            {#2}%
+            }}%
+        \end{center}%
+
+        \addlogosFooter{#3}
+
+    \end{frame}%
+    }
+}
+
+
+\newcommand{\framepiclogos}[4][1]{
+  {
+    \usebackgroundtemplate{%
+    \tikz[overlay,remember picture] \node[opacity=#1, at=(current page.center)] {
+      \includegraphics[height=\paperheight]{#2}};
+    }
+    \begin{frame}[plain]
+      \huge{#3}
+    \end{frame}
+
+    \addlogosFooter{#4}
+  }
+}
+

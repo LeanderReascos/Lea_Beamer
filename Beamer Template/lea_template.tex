@@ -1,0 +1,88 @@
+\documentclass[aspectratio=169]{beamer}
+\input{lea_aux.tex}
+\usetheme{lea}
+
+%----------------------------------------------------------------------------------%
+%                              Setup Lea Template                                  %
+%----------------------------------------------------------------------------------%
+
+% Global Font
+\changefontsizes{20pt}
+\usefonttheme{serif}
+
+% Change First page fontsizes.
+\titlefontsize{35pt}{35pt}
+\authorfontsize{15pt}{15pt}
+\descriptionfontsize{12pt}{12pt}
+\datefontsize{15pt}{15pt}
+
+% Change First page positions.
+\titleWpos{1.2cm}
+\titleHpos{6cm}
+\authorWpos{1.2cm}
+\authorHpos{7.5cm}
+\extraTextWpos{1.2cm}
+\extraTextHpos{10cm}
+
+% Change Frame positions and sizes.
+\frameTitleH{3cm}
+\frameLogoH{1.75cm}
+\logoSlideWpos{22cm}
+\frameTitleHpos{1.5cm}
+\frameTitleWpos{0.75cm}
+
+% Change Frame fontsizes.
+\frametitlefontsize{30pt}{30pt}
+
+
+%----------------------------------------------------------------------------------%
+%                                   Document                                       %
+%----------------------------------------------------------------------------------%
+
+% Add Bibliography
+\usepackage[style=ieee]{biblatex}
+\addbibresource{bibliography.bib}
+
+\logoUM{EE}{School of Engineering}
+%\logoA{logofile}
+
+\title{Beamer template Lea}
+\author{Leander Reascos}
+
+\extraText{Description or other Information}
+
+
+\begin{document}
+    \begin{frame}[plain]
+        \titlepage
+    \end{frame}
+
+    \begin{frame}{\contentsname}
+        \tableofcontents[hideallsubsections]
+    \end{frame}
+
+    \section{Introduction}
+    \begin{frame}{Introduction}
+        
+    \end{frame}
+
+    \framecard{Sections}
+
+    \section{Section 1}
+    \begin{frame}{Frame 1}
+        
+    \end{frame}
+
+    \section{Section 2}
+    \begin{frame}{Frame 2}
+        
+    \end{frame}
+
+    \framelogos{Discussion}{LOGOS}
+
+    \begin{frame}[allowframebreaks,plain]{References}
+        \nocite{*}
+        \printbibliography
+    \end{frame}
+
+\end{document}

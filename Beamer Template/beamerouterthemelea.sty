@@ -1,0 +1,45 @@
+\mode<presentation>
+
+\newcommand{\theframeTitleHpos}{1.5cm}
+\newcommand{\frameTitleHpos}[1]{\renewcommand{\theframeTitleHpos}{#1}}
+\newcommand{\theframeTitleWpos}{0.75cm}
+\newcommand{\frameTitleWpos}[1]{\renewcommand{\theframeTitleWpos}{#1}}
+
+\defbeamertemplate*{frametitle}{ims}[1][]
+{
+    
+    \begin{tikzpicture}
+        \useasboundingbox (0,0) rectangle(\the\paperwidth,\theframeTitleH);
+
+        \fill[color=CONTENT_BAR] (-1,\theframeTitleH-\theContentH) rectangle(\the\paperwidth, \theframeTitleH);
+        \fill[color=FRAME_TITLE] (-1,0) rectangle(\the\paperwidth, \theframeTitleH-\theContentH);
+        \fill[color=LINE_TITLE] (-1,-0.05) rectangle(\the\paperwidth, 0);
+        
+        % Logo in the top right
+        \node[inner sep=0pt] (logo) at (\theLogoSWpos,\theLogoSHpos){\thelogoSlides};
+    \end{tikzpicture}
+
+    \ifx\insertframesubtitle\@empty
+
+    \begin{textblock*}{\paperwidth}(\theframeTitleWpos,0.15cm)
+        {\scriptsize
+        \usebeamerfont{navigation}
+        \insertnavigation{20cm}
+        }
+    \end{textblock*}
+
+    \begin{textblock*}{\paperwidth}(\theframeTitleWpos, \theframeTitleHpos)
+    {\usebeamercolor[fg]{frametitle}\usebeamerfont{frametitle}\insertframetitle}
+    \end{textblock*}
+
+    \else
+    % If we have both title and subtitle, stack them
+    \begin{textblock*}{\paperwidth}(0.2cm,0.1cm)
+    {\usebeamercolor[fg]{frametitle}\usebeamerfont{frametitle}\insertframetitle}
+    \end{textblock*}
+
+    \fi
+}
+
+
+\mode<all>
