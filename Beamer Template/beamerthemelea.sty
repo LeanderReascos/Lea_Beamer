@@ -20,14 +20,18 @@
 \setbeamerfont{date}{size=\Large}
 \newcommand{\datefontsize}[2]{\setbeamerfont{date}{size=\fontsize{#1}{#2}\selectfont}}
 \setbeamerfont{section in toc}{size=\fontsize{25pt}{25pt}\selectfont}
+\newcommand{\contentfontsize}[2]{\setbeamerfont{section in toc}{size=\fontsize{#1}{#2}\selectfont}}
 \setbeamerfont{navigation}{size=\fontsize{8pt}{8pt}\selectfont, family=\sffamily}
 \setbeamerfont{frametitle}{size=\Large, series=\bfseries}
 \newcommand{\frametitlefontsize}[2]{\setbeamerfont{frametitle}{size=\fontsize{#1}{#2}\selectfont}}
 \setbeamerfont{footline}{size=\fontsize{13pt}{13pt}\selectfont}
+\setbeamerfont{caption}{size=\fontsize{11pt}{11pt}\selectfont}
 
 % Beamer template
 \setbeamertemplate{section in toc}{%
-  {\color{black}\inserttocsectionnumber.}~\color{black}\inserttocsection}
+  { 
+    \color{black}\inserttocsectionnumber.}~\color{black}\inserttocsection
+  }
 \setbeamertemplate{subsection in toc}[subsections numbered]
 
 \setbeamertemplate{caption}[numbered]

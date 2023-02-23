@@ -25,6 +25,14 @@
 \usepackage{hyperref}
 \usepackage{scrextend}
 
+
+\usepackage{etoolbox}
+
+
+\makeatletter
+\patchcmd{\beamer@sectionintoc}{\vskip1.5em}{\vskip0.5em}{}{}
+\makeatother
+
 % Frame with huge centered text
 \newcommand{\framecard}[2][BACKGROUND_DEFAULT]{
     {\setbeamercolor{background canvas}{bg=#1}%
