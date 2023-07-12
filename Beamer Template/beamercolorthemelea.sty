@@ -2,13 +2,97 @@
 
 \definecolor{GRAY_UM}{HTML}{97999B}
 
-\definecolor{BACKGROUND_DEFAULT}{HTML}{D35050}
-\definecolor{LOGOS_FOOT_LINE}{HTML}{000000}
-\definecolor{LOGOS_FOOTER}{HTML}{6A6A6A}
+% Default Palette
+\newcommand{\defaultPalette}{
 
-\definecolor{CONTENT_BAR}{HTML}{8BB1C9}
-\definecolor{FRAME_TITLE}{HTML}{606796}
+    \definecolor{BACKGROUND_DEFAULT}{HTML}{D35050}
+    \definecolor{LOGOS_FOOT_LINE}{HTML}{000000}
+    \definecolor{LOGOS_FOOTER}{HTML}{6A6A6A}
+
+    \definecolor{CONTENT_BAR}{HTML}{8BB1C9}
+    \definecolor{FRAME_TITLE}{HTML}{606796}
+    \definecolor{LINE_TITLE}{HTML}{000000}
+}
+
+
+\newcommand{\PaletteINL}{
+\definecolor{BACKGROUND_DEFAULT}{HTML}{47338E}
+\definecolor{LOGOS_FOOTER}{HTML}{47338E}
+\definecolor{CONTENT_BAR}{HTML}{47338E}
+\definecolor{FRAME_TITLE}{HTML}{6859BA}
 \definecolor{LINE_TITLE}{HTML}{000000}
+\definecolor{LOGOS_FOOT_LINE}{HTML}{47338E}
+}
+
+\newcommand{\PaletteA}{
+\definecolor{BACKGROUND_DEFAULT}{HTML}{404040}
+\definecolor{LOGOS_FOOTER}{HTML}{404040}
+\definecolor{CONTENT_BAR}{HTML}{4C4C4C}
+\definecolor{FRAME_TITLE}{HTML}{0072B2}
+\definecolor{LINE_TITLE}{HTML}{000000}
+\definecolor{LOGOS_FOOT_LINE}{HTML}{404040}
+}
+
+\newcommand{\PaletteBlue}{
+\definecolor{BACKGROUND_DEFAULT}{HTML}{004EAD}
+\definecolor{LOGOS_FOOTER}{HTML}{004EAD}
+\definecolor{CONTENT_BAR}{HTML}{004EAD}
+\definecolor{FRAME_TITLE}{HTML}{007ACC}
+\definecolor{LINE_TITLE}{HTML}{000000}
+\definecolor{LOGOS_FOOT_LINE}{HTML}{E6F4FF}
+}
+
+\newcommand{\PaletteGreen}{
+\definecolor{BACKGROUND_DEFAULT}{HTML}{43A047}
+\definecolor{LOGOS_FOOTER}{HTML}{43A047}
+\definecolor{CONTENT_BAR}{HTML}{4CAF50}
+\definecolor{FRAME_TITLE}{HTML}{43A047}
+\definecolor{LINE_TITLE}{HTML}{000000}
+\definecolor{LOGOS_FOOT_LINE}{HTML}{E1F3E1}
+}
+
+\newcommand{\PalettePink}{
+\definecolor{BACKGROUND_DEFAULT}{HTML}{CA185B}
+\definecolor{LOGOS_FOOTER}{HTML}{CA185B}
+\definecolor{CONTENT_BAR}{HTML}{880E4F}
+\definecolor{FRAME_TITLE}{HTML}{C2185B}
+\definecolor{LINE_TITLE}{HTML}{000000}
+\definecolor{LOGOS_FOOT_LINE}{HTML}{FFD9E7}
+}
+
+\newcommand{\PaletteOrange}{
+\definecolor{BACKGROUND_DEFAULT}{HTML}{FF5722}
+\definecolor{LOGOS_FOOTER}{HTML}{FF5722}
+\definecolor{CONTENT_BAR}{HTML}{FF5722}
+\definecolor{FRAME_TITLE}{HTML}{FF7043}
+\definecolor{LINE_TITLE}{HTML}{000000}
+\definecolor{LOGOS_FOOT_LINE}{HTML}{FFE5CC}
+}
+
+
+
+
+\newcommand{\Palette}{
+
+\definecolor{BACKGROUND_DEFAULT}{HTML}{D77575}
+\definecolor{LOGOS_FOOTER}{HTML}{D77575}
+\definecolor{CONTENT_BAR}{HTML}{3D3B8E}
+\definecolor{FRAME_TITLE}{HTML}{6883BA}
+
+\definecolor{LINE_TITLE}{HTML}{000000}
+\definecolor{LOGOS_FOOT_LINE}{HTML}{D77575}
+}
+
+\newcommand{\grayPalette}{
+    \definecolor{BACKGROUND_DEFAULT}{HTML}{D4D4D4}
+    \definecolor{LOGOS_FOOTER}{HTML}{262626}
+    \definecolor{CONTENT_BAR}{HTML}{313131}
+    \definecolor{FRAME_TITLE}{HTML}{7D7D7D}
+
+    \definecolor{LINE_TITLE}{HTML}{000000}
+    \definecolor{LOGOS_FOOT_LINE}{HTML}{000000}
+}
+
 
 % Normal text
 \setbeamercolor{normal text}{fg=black}
@@ -27,4 +111,10 @@
 \setbeamercolor*{author in head/foot}{fg=black}
 
 \setbeamercolor*{navigation}{fg=black,bg=gray}
-\setbeamercolor*{structure}{fg=FRAME_TITLE}
+\setbeamercolor*{structure}{fg=white}
+
+\setbeamercolor*{item}{fg=FRAME_TITLE}
+\setbeamercolor*{bibliography entry author}{fg=FRAME_TITLE}
+\setbeamercolor*{bibliography entry title}{fg=FRAME_TITLE}
+\setbeamercolor*{bibliography entry location}{fg=black}
+\setbeamercolor*{bibliography entry note}{fg=black}

@@ -37,23 +37,31 @@
 \newcommand{\frameLogoH}[1]{\renewcommand{\theframeLogoH}{#1}}
 
 % Define Logo
+\newcommand{\thelogoUM}[3]{
+    \includegraphics[width=1.7cm]{images/logos/UM.pdf}\includegraphics[width=1.7cm]{images/logos/#1.pdf}#3\\
+    \vspace{0.1cm}
+    \NewsGotTBold
+    \fontsize{11pt}{11pt}\selectfont
+    \color{GRAY_UM}
+    University of Minho\\
+    \NewsGotTLight
+    \fontsize{10pt}{10pt}\selectfont
+    \vspace{-0.4cm}
+    #2
+}
+
+\newcommand{\theSlidelogoUM}[1]{
+    \includegraphics[height=\theframeLogoH]{images/logos/UM.pdf}\includegraphics[height=\theframeLogoH]{images/logos/#1.pdf}
+}
+
 \newcommand{\thelogo}{}
 \newcommand{\thelogoSlides}{}
 \newcommand{\logoUM}[2]{
     \renewcommand{\thelogo}{
-        \includegraphics[width=1.7cm]{images/logos/UM.jpg}\includegraphics[width=1.7cm]{images/logos/#1.jpg}\\
-        \vspace{0.1cm}
-        \NewsGotTBold
-        \fontsize{11pt}{11pt}\selectfont
-        \color{GRAY_UM}
-        University of Minho\\
-        \NewsGotTLight
-        \fontsize{10pt}{10pt}\selectfont
-        \vspace{-0.4cm}
-        #2
+        \thelogoUM{#1}{#2}{}
     }
     \renewcommand{\thelogoSlides}{
-        \includegraphics[height=\theframeLogoH]{images/logos/UM.jpg}\includegraphics[height=\theframeLogoH]{images/logos/#1.jpg}
+        \theSlidelogoUM{#1}
     }
 }
 
@@ -77,7 +85,7 @@
 }
 
 \defbeamertemplate*{title page}{ims}[1][]{
-    \begin{textblock*}{4cm}(1.2cm,1.2cm){
+    \begin{textblock*}{0.8\paperwidth}(1.2cm,1.2cm){
         \thelogo
     }
     \end{textblock*}
